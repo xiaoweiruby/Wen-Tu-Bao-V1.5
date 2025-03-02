@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>文图宝</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="images/icon128.png" alt="文图宝" class="logo">
+    </div>
+    
+    <div class="input-section">
+      <input type="text" id="title" placeholder="请输入标题" class="input-field">
+      <textarea id="content" placeholder="请输入正文内容" class="input-field"></textarea>
+      <input type="text" id="footer" placeholder="请输入页尾" class="input-field">
+      
+      <div class="size-selector">
+        <label>选择图片尺寸：</label>
+        <select id="imageSize">
+          <option value="1080x1920">1080 x 1920</option>
+          <option value="1080x1080">1080 x 1080</option>
+          <option value="800x600">800 x 600</option>
+        </select>
+      </div>
+      
+      <button id="generateBtn" class="btn">生成图片</button>
+    </div>
+    
+    <div class="preview-section">
+      <h3>预览</h3>
+      <div id="previewContainer"></div>
+    </div>
+    
+    <div class="download-section">
+      <button id="downloadSingleBtn" class="btn">下载图片</button>
+    </div>
+  </div>
+  
+  <script src="jszip.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

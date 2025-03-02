@@ -1,0 +1,109 @@
+body {
+  width: 500px;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Microsoft YaHei', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea.input-field {
+  height: 100px;
+  resize: vertical;
+}
+
+.size-selector {
+  margin: 15px 0;
+}
+
+.size-selector select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.preview-section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#previewContainer {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#previewContainer img {
+  max-height: 300px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#previewContainer img.selected {
+  border: 3px solid #4CAF50;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#downloadAllBtn {
+  background-color: #2196F3;
+}
+
+#downloadAllBtn:hover {
+  background-color: #1976D2;
+}
