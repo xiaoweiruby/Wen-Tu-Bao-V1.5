@@ -17,28 +17,58 @@
       <input type="text" id="footer" placeholder="请输入页尾" class="input-field">
       
       <div class="size-selector">
-        <label>选择图片尺寸：</label>
+        <label>选择模板：</label>
+        <select id="templateStyle">
+          <option value="default">默认风格</option>
+          <option value="spring-festival">春节风格</option>
+          <option value="lantern-festival">元宵节风格</option>
+          <option value="mid-autumn">中秋节风格</option>
+          <option value="christmas">圣诞节风格</option>
+          <option value="academic">学术论文风格</option>
+          <option value="news">新闻报道风格</option>
+          <option value="poetry">诗歌文集风格</option>
+          <option value="handwriting">手写风格</option>
+          <option value="letter">信件风格</option>
+        </select>
+
+        <label style="margin-left: 15px;">选择图片尺寸：</label>
         <select id="imageSize">
           <option value="1080x1920">1080 x 1920</option>
           <option value="1080x1080">1080 x 1080</option>
           <option value="800x600">800 x 600</option>
+          <option value="600x800">600 x 800</option>
         </select>
       </div>
       
-      <button id="generateBtn" class="btn">生成图片</button>
+      <div class="size-selector" style="margin-top: 10px;">
+        <label>正文字体大小：</label>
+        <select id="fontSize">
+          <option value="18">小 (18px)</option>
+          <option value="24" selected>中 (24px)</option>
+          <option value="32">大 (32px)</option>
+        </select>
+      </div>
+      
+      <div class="preview-toggle">
+        <label>
+          <input type="checkbox" id="realTimePreview"> 实时预览
+        </label>
+        <label style="margin-left: 15px;">
+          <input type="checkbox" id="showPageNumber"> 显示页码
+        </label>
+      </div>
     </div>
     
     <div class="preview-section">
-      <h3>预览</h3>
+      <h3>图片预览</h3>
       <div id="previewContainer"></div>
     </div>
     
     <div class="download-section">
-      <button id="downloadSingleBtn" class="btn">下载图片</button>
+      <button id="downloadSingleBtn" class="btn">下载选中图片</button>
     </div>
   </div>
   
-  <script src="jszip.min.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

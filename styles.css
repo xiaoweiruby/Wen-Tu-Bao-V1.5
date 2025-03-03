@@ -76,8 +76,52 @@ textarea.input-field {
   max-width: 100%;
   overflow-x: auto;
   white-space: nowrap;
-  padding: 10px 0;
+  padding: 10px 20px;
+  margin: 0 -20px;
   text-align: center;
+  scroll-behavior: smooth;
+}
+
+.loading {
+  padding: 20px;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+
+.preview-wrapper {
+  display: inline-flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.img-container {
+  position: relative;
+  display: inline-block;
+  min-width: 100px;
+  min-height: 100px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.img-container::before {
+  content: '加载中...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.img-container.loaded::before {
+  display: none;
+}
+
+.img-container.error::before {
+  content: '加载失败';
+  color: #ff4444;
 }
 
 #previewContainer img {
@@ -98,12 +142,4 @@ textarea.input-field {
 .download-section {
   text-align: center;
   margin-top: 20px;
-}
-
-#downloadAllBtn {
-  background-color: #2196F3;
-}
-
-#downloadAllBtn:hover {
-  background-color: #1976D2;
 }
